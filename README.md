@@ -10,7 +10,7 @@ Starting from : June 22, 2023
 - <b>Project 1</b> - [COVID Portfolio Project - SQL Data Exploration](https://github.com/mK-zero/DataAnalystProjects/tree/main/1_SQL-Data-Exploration)
 
 <p align="center">
-Last Updated : June 22, 2023
+Last Updated : June 25, 2023
 </p>
 
 <p align="center">
