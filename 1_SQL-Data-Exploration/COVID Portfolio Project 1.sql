@@ -1,3 +1,11 @@
+/*
+Covid 19 Data Exploration
+
+Skills: Joins, CTEs, Temp Tables, Windows Functions, 
+		Agreegate Functions, Creating Views, Converting Data Types
+
+*/
+
 SELECT *
 FROM PortfolioProject..CovidDeaths
 WHERE continent is not null
@@ -34,12 +42,21 @@ WHERE continent is not null
 ORDER BY location, date
 
 
+-- 3 - PercentPopulationInfected
 -- Looking at Countries with Highest Infection Rate compared to Population
 SELECT location, population, MAX(total_cases) as HighestInfectionCount, MAX((total_cases/population))*100 as PercentPopulationInfected
 FROM PortfolioProject..CovidDeaths
 --WHERE location like '%states%'
 WHERE continent is not null
 GROUP BY location, population
+ORDER BY PercentPopulationInfected desc
+
+
+-- 4 - PercentPopulationDate
+SELECT location, population, date, MAX(total_cases) as HighestInfectionCount, MAX((total_cases/population))*100 as PercentPopulationInfected
+FROM PortfolioProject..CovidDeaths
+--WHERE location like '%states%'
+GROUP BY location, population, date
 ORDER BY PercentPopulationInfected desc
 
 
@@ -72,6 +89,17 @@ WHERE continent is null
 GROUP BY location
 ORDER BY TotalDeathCount desc
 
+-- 2 - ContinentNumbers
+-- These locations are not included in the above queries
+-- European Union is part of Europe
+SELECT location, MAX(cast(total_deaths as bigint)) as TotalDeathCount
+FROM PortfolioProject..CovidDeaths
+--WHERE location like '%states%'
+WHERE continent is null
+and location not in ('World', 'European Union', 'International')
+GROUP BY location
+ORDER BY TotalDeathCount desc
+
 
 
 -- GLOBAL NUMBERS
@@ -83,6 +111,7 @@ WHERE continent is not null
 GROUP BY date
 ORDER BY date, total_cases
 
+-- 1 - GlobalNumbers
 SELECT SUM(new_cases) as total_cases, SUM(cast(new_deaths as bigint)) as total_deaths, (SUM(cast(new_deaths as bigint))/SUM(new_cases))*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
 --WHERE location like '%states%'
