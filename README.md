@@ -11,8 +11,10 @@ Starting from : June 22, 2023
 
 - <b>Project 2</b> - [COVID Portfolio Project - Power BI Visualization](https://github.com/mK-zero/DataAnalystProjects/tree/main/2_Power-BI-Visualization)
 
+- <b>Project 3</b> - [Nashville Housing Project - Data Cleaning in SQL](https://github.com/mK-zero/DataAnalystProjects/tree/main/3_Data-Cleaning-in-SQL)
+
 <p align="center">
-Last Updated : June 25, 2023
+Last Updated : July 16, 2023
 </p>
 
 <p align="center">
