@@ -13,8 +13,10 @@ Starting from : June 22, 2023
 
 - <b>Project 3</b> - [Nashville Housing Project - Data Cleaning in SQL](https://github.com/mK-zero/DataAnalystProjects/tree/main/3_Data-Cleaning-in-SQL)
 
+- <b>Project 4</b> - [Movie Portfolio Project - Correlation in Python](https://github.com/mK-zero/DataAnalystProjects/tree/main/4_Correlation-in-Python)
+
 <p align="center">
-Last Updated : July 16, 2023
+Last Updated : July 30, 2023
 </p>
 
 <p align="center">
